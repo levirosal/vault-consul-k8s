@@ -1,6 +1,4 @@
-# vault-consul-k8s
-
-# ===================Kubernetes Files============================
+# Kubernetes Files
 
 Files for creating the structure in Kubernetes for Vault / Consul integration.
 
@@ -10,7 +8,7 @@ vault_k8s.yaml = Creation of Vault port entry service and pods of Vault for Cons
 
 vault.hcl = Vault configurations for creation of ConfigMap.
 
-# ====================How to Make==================================
+# How to Make
 
 kubectl create -f consul_k8s.yaml
 kubectl create configmap vault --from-file=vault.hcl
