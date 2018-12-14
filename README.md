@@ -11,5 +11,7 @@ vault.hcl = Vault configurations for creation of ConfigMap.
 # How to Make
 
 kubectl create -f consul_k8s.yaml
+
 kubectl create configmap vault --from-file=vault.hcl
+
 kubectl create -f vault_k8s.yaml
