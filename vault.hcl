@@ -7,7 +7,7 @@ listener "tcp" {
  
 storage "consul" {
   address = "127.0.0.1:8500"
-  path    = "levi_ia/"
+  path    = "cluster_k8s/"
   disable_registration = "true"
 }
  
