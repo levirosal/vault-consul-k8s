@@ -46,7 +46,21 @@ spec:
                 command:
                 - /bin/sh
                 - -c
-                - consul leave            
+                - consul leave  
+          readinessProbe:
+            httpGet:
+              path: /ui
+              port: 8500
+            initialDelaySeconds: 5
+            timeoutSeconds: 1
+            periodSeconds: 15
+          livenessProbe:
+            httpGet:
+              path: /ui
+              port: 8500
+            initialDelaySeconds: 30
+            timeoutSeconds: 1
+            periodSeconds: 15      
           ports:
             - containerPort: 8500
               name: ui-port
